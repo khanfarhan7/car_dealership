@@ -6,33 +6,21 @@ public class Employee {
 	Vehicle vehicle1 = new Vehicle ("Tesla", 2017, 4000);
 	
 
-	double loanAmount = vehicle1.getPrice()-cust2.getCashOnHand();
-	
-	//double loanAmount=3500;
 	private String name;
 	
-	public Employee(String name, double loanAmount) {
+	public Employee(String name) {
 		super();
-		this.loanAmount = loanAmount;
 		this.setName(name);
 	}
 
 	
-	public void runCreditHistory (Customer cust2, double loanAmount) {
-		
-		System.out.println("Ran Credit History");
-		
-	}
 	
-	public void processTransaction (Customer cust2, Vehicle vehicle1) {
-		System.out.println("Processing Transaction....");
-		
-	}
-
 	
 	public void handleCustomer (Customer cust2, boolean finance, Vehicle vehicle1) {
 		
 		if (finance==true) {
+			
+			double loanAmount = vehicle1.getPrice()-cust2.getCashOnHand();
 			runCreditHistory(cust2, loanAmount);
 		}
 		else if (vehicle1.getPrice()<=cust2.getCashOnHand()) {
@@ -47,6 +35,19 @@ public class Employee {
 		
 		//System.out.println("Method working");
 	}
+	
+	public void runCreditHistory (Customer cust2, double loanAmount) {
+		
+		System.out.println("Ran Credit History");
+		System.out.println("Loan Amount : " + loanAmount);
+		
+	}
+	
+	public void processTransaction (Customer cust2, Vehicle vehicle1) {
+		System.out.println("Vehicle SOLD: " + vehicle1 );
+		
+	}
+
 
 
 	public String getName() {

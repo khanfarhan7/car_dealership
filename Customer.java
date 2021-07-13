@@ -51,18 +51,26 @@ public class Customer {
 
 
 	public void setCashOnHand(double cashOnHand) {
-		cashOnHand += 500;
+		//cashOnHand += 500;
 		this.cashOnHand = cashOnHand;
 	}
 
 
 
 	public void purchaseCar (Vehicle vehicle, Employee employee, boolean finance) {
-		System.out.println("SOLD " +  vehicle);
-		
-		
+		//System.out.println("SOLD " +  vehicle);
+		employee.handleCustomer(this, finance, vehicle);
 		
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", address=" + address + "]";
+	}
+	
+	
 	
 	
 }
