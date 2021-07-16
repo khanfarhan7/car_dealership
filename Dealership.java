@@ -10,7 +10,7 @@ public class Dealership {
 		Employee e1 = new Employee("John");
 		
 		
-		cust2.purchaseCar(v2, e1, true);
+		cust2.purchaseCar(v1, e1, true);
 		
 		System.out.println("Name of the customer who visited dealership: " + cust2);
 
